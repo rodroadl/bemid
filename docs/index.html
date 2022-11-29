@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bio Science Demo</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+  <div class="jumbotron text-center" style="background-image: url('maine-seacoast.jpg'); background-size:100% 100%;">
+    <h1 style="color: white;">Welcome to our Maine Bio-science demo page</h1>
+    <p></p>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <h3 class="text-center">James' visualization</h3>
+        <p class="text-center">Title</p>
+        <p class="text-center">Short Description</p>
+        <div id="observablehq-viewof-select-e18ae39a"></div>
+	<div id="observablehq-chart-e18ae39a"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm">
+        <h3 class="text-center">Aaron's visualization</h3>
+        <p class="text-center">Title</p>
+        <p class="text-center">Short Description</p>
+        <div id="Aaron"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm">
+        <h3 class="text-center"><strong>Interdisciplinarity: Key to Research and Industry Success</strong></h3>
+        <br>
+        <p class="text-center">The following Force-Directed plot graph illustrates the degree of
+          <strong>interdisciplinarity</strong> between institutions.
+          Two or more specializations closer to one another means an institution is more likely to have these
+          specialization than if they were further apart.
+          The power of interdisciplinary learning lies in how it teaches students to think and make connections.
+          Interdisciplinary study allows for synthesis of ideas and the synthesis of characteristics from many
+          disciplines.
+          An interdisciplinary approach promotes awareness of individual needs within the team and encourages
+          communication so that other members have the information they need to apply another aspect of the treatment
+          plan.
+          At the same time, it addresses students' individual differences and helps to develop important, transferable
+          skills, vital to both industry and research initiatives.
+        </p>
+        <div id="Jack"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm">
+        <h3 class="text-center"><strong>Bioscience Organizational Hubs</strong></h3>
+        <p class="text-center">The Force-Directed graph provided below visualizes the Bioscience Organizations of Maine
+          based upon specializations. Each hub, designated by the blue circles, represents the type of organization
+          focused on Bioscience including STEM Schools, Academies, CTE's, Community Colleges, Colleges and Companies.
+          Hovering the circles connnected with these hubs will reveal the title of the organization.
+          The drop down menu allows the user to filter the map to include organizations that offer particular
+          specializations. While these specializations are currently represented by numbers, as more data is collected
+          they will include areas of specialization such as Food Science, Forensic Science, Evolution, Zoology, etc. The
+          colors of each circle will also represent the region of Maine where each orgainzation is located when more
+          geographical
+          information is gathered. This graph is intended to provide the user with the opportunity to connect their
+          interests with opportunities to learn, interact with like minded individuals, search for careers, and map out
+          possible pathways from education to employment. </p>
+        <div id="observablehq-chart-89c38fbb"></div>
+        <div id="observablehq-viewof-specialization-89c38fbb"></div>
+      </div>
+    </div>
+
+
+  </div>
+  <!-- Footer -->
+  <footer class="page-footer font-small blue " style="background-color: #D3D3D3;">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2022 Copyright:
+      <a href="/"> MDBootstrap.com</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+
+</body>
+
+</html>
+
+<script type="module">
+
+  // Load the Observable runtime and inspector.
+  import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+
+  // Your notebook, compiled as an ES module.
+  import notebook from "https://api.observablehq.com/d/8df663d207459709.js?v=3";
+
+  // Load the notebook, observing its cells with a default Inspector
+  // that simply renders the value of each cell into the provided DOM node.
+  new Runtime().module(notebook, name => {
+    if (name === "chart") return new Inspector(document.querySelector("#Jack"));
+    if (name === "mychart") return new Inspector(document.querySelector("#mybrush"));
+    if (name === "map_filter") return true;
+  });
+
+  import define from "https://api.observablehq.com/@derekgmuse/bioscience-force@137.js?v=3";
+  new Runtime().module(define, name => {
+    if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-89c38fbb"));
+    if (name === "viewof specialization") return new Inspector(document.querySelector("#observablehq-viewof-specialization-89c38fbb"));
+    return ["filteredNodes", "graph", "filteredLinks"].includes(name);
+  });
+
+  // Embedding James' Notebook
+import james from "https://api.observablehq.com/d/4e6f21321219c2b5@1162.js?v=3";
+new Runtime().module(james, name => {
+  if (name === "viewof select") return new Inspector(document.querySelector("#observablehq-viewof-select-e18ae39a"));
+  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-e18ae39a"));
+  return ["labels","lines","sideeffect"].includes(name);
+});
+</script>
