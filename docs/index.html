@@ -24,8 +24,10 @@
         <h3 class="text-center">James' visualization</h3>
         <p class="text-center">Curriculum Path</p>
         <p class="text-center">Short Description</p>
-        <div id="observablehq-viewof-select-dbd397ca"></div>
-	<div id="observablehq-chart-dbd397ca"></div>
+	<div id="wrapper">
+<div id="observablehq-viewof-select-acc3510d"></div>
+<div id="observablehq-chart-acc3510d"></div>
+	</div>
       </div>
     </div>
     <div class="row">
@@ -118,10 +120,14 @@
   });
 
   // Embedding James' Notebook
-import def from "https://api.observablehq.com/d/9587a0fc95f27f1c@1215.js?v=3";
-new Runtime().module(def, name => {
-  if (name === "viewof select") return new Inspector(document.querySelector("#observablehq-viewof-select-dbd397ca"));
-  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-dbd397ca"));
-  return ["lines","labels","sideeffect"].includes(name);
+import def from "https://api.observablehq.com/d/9587a0fc95f27f1c@1256.js?v=3";
+	let james = new Runtime().module(def, name => {
+  if (name === "viewof select") return new Inspector(document.querySelector("#observablehq-viewof-select-acc3510d"));
+  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-acc3510d"));
+  return ["lines","labels","sideeffect","height"].includes(name);
 });
+
+	let w = 800;
+	let div = document.getElementById('wrapper')
+	james.redefine('width', w)
 </script>
