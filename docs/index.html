@@ -26,8 +26,8 @@
         <p class="text-center">Curriculum Path</p>
         <p class="text-center">Short Description</p>
 	<div id="wrapper">
-<div id="observablehq-viewof-select-acc3510d"></div>
-<div id="observablehq-chart-acc3510d"></div>
+<div id="observablehq-viewof-select-93e8e8f9"></div>
+<div id="observablehq-chart-93e8e8f9"></div>
 	</div>
       </div>
     </div>
@@ -112,11 +112,11 @@
   });
 
   // Embedding James' Notebook
-import def from "https://api.observablehq.com/d/9587a0fc95f27f1c@1256.js?v=3";
+import def from "https://api.observablehq.com/d/9587a0fc95f27f1c@1312.js?v=3";
 	let james = new Runtime().module(def, name => {
-  if (name === "viewof select") return new Inspector(document.querySelector("#observablehq-viewof-select-acc3510d"));
-  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-acc3510d"));
-  return ["lines","labels","sideeffect","height"].includes(name);
+  if (name === "viewof select") return new Inspector(document.querySelector("#observablehq-viewof-select-93e8e8f9"));
+  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-93e8e8f9"));
+  return ["lines","labels","height","sideeffect"].includes(name);
 });
 
 	let w = 800;
