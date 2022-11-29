@@ -22,10 +22,10 @@
     <div class="row">
       <div class="col-sm">
         <h3 class="text-center">James' visualization</h3>
-        <p class="text-center">Title</p>
+        <p class="text-center">Curriculum Path</p>
         <p class="text-center">Short Description</p>
-        <div id="observablehq-viewof-select-e18ae39a"></div>
-	<div id="observablehq-chart-e18ae39a"></div>
+        <div id="observablehq-viewof-select-dbd397ca"></div>
+	<div id="observablehq-chart-dbd397ca"></div>
       </div>
     </div>
     <div class="row">
@@ -118,10 +118,10 @@
   });
 
   // Embedding James' Notebook
-import james from "https://api.observablehq.com/d/4e6f21321219c2b5@1162.js?v=3";
-new Runtime().module(james, name => {
-  if (name === "viewof select") return new Inspector(document.querySelector("#observablehq-viewof-select-e18ae39a"));
-  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-e18ae39a"));
-  return ["labels","lines","sideeffect"].includes(name);
+import def from "https://api.observablehq.com/d/9587a0fc95f27f1c@1215.js?v=3";
+new Runtime().module(def, name => {
+  if (name === "viewof select") return new Inspector(document.querySelector("#observablehq-viewof-select-dbd397ca"));
+  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-dbd397ca"));
+  return ["lines","labels","sideeffect"].includes(name);
 });
 </script>
