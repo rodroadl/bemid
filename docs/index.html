@@ -28,13 +28,13 @@
 Sequence of left path is &lt;Maine STEM Schools - Academies - Maine CTEs - Community Colleges - Colleges - Companies&gt;.  <br>
 Sequence of right path is &lt;[Maine STEM Schools, Academies, Maine CTEs] - [Community Colleges, Colleges] - [Companies]&gt;</p>
 	<div id="wrapper">
-		<div id="observablehq-viewof-select-bfd203e3"></div>
+		<div id="observablehq-viewof-select-f4a77210"></div>
 		<div class="row">
 			<div class="col-sm">
-				<div id="observablehq-chart-bfd203e3"></div>
+				<div id="observablehq-map-f4a77210"></div>
 			</div>
 			<div class="col-sm">
-				<div id="observablehq-chart0-bfd203e3"></div>
+				<div id="observablehq-chart-f4a77210"></div>
 			</div>
 		</div>
 	</div>
@@ -121,12 +121,12 @@ Sequence of right path is &lt;[Maine STEM Schools, Academies, Maine CTEs] - [Com
   });
 
   // Embedding James' Notebook
-	import def from "https://api.observablehq.com/d/845584d16aca7072@1384.js?v=3";
+	import def from "https://api.observablehq.com/d/6703cfce2eceff50@1406.js?v=3";
 	let james = new Runtime().module(def, name => {
-		  if (name === "viewof select") return new Inspector(document.querySelector("#observablehq-viewof-select-bfd203e3"));
-		  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-bfd203e3"));
-		  if (name === "chart0") return new Inspector(document.querySelector("#observablehq-chart0-bfd203e3"));
-		  return ["lines","lines0","labels","labels0","height","width0","width00","sideeffect","sideeffect0"].includes(name);
+		  if (name === "viewof select") return new Inspector(document.querySelector("#observablehq-viewof-select-f4a77210"));
+		  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-f4a77210"));
+		  if (name === "map") return new Inspector(document.querySelector("#observablehq-map-f4a77210"));
+		  return ["lines","labels","height","width0","sideeffect"].includes(name);
 		});
 
 
