@@ -25,16 +25,15 @@
         <h3 class="text-center">James' visualization</h3>
         <p class="text-center">Curriculum Path</p>
         <p class="text-center">Shows the Path of selected specialization based on dummy data.  <br>
-Sequence of left path is &lt;Maine STEM Schools - Academies - Maine CTEs - Community Colleges - Colleges - Companies&gt;.  <br>
-Sequence of right path is &lt;[Maine STEM Schools, Academies, Maine CTEs] - [Community Colleges, Colleges] - [Companies]&gt;</p>
+Hierarchy of graph is &lt;[Maine STEM Schools, Academies, Maine CTEs] - Community Colleges - Colleges - [Companies]&gt;</p>
 	<div id="wrapper">
-		<div id="observablehq-viewof-select-f4a77210"></div>
+		<div id="observablehq-viewof-select-9fb4453d"></div>
 		<div class="row">
 			<div class="col-sm">
-				<div id="observablehq-map-f4a77210"></div>
+				<div id="observablehq-map-9fb4453d"></div>
 			</div>
 			<div class="col-sm">
-				<div id="observablehq-chart-f4a77210"></div>
+				<div id="observablehq-chart-9fb4453d"></div>
 			</div>
 		</div>
 	</div>
@@ -121,13 +120,13 @@ Sequence of right path is &lt;[Maine STEM Schools, Academies, Maine CTEs] - [Com
   });
 
   // Embedding James' Notebook
-	import def from "https://api.observablehq.com/d/6703cfce2eceff50@1406.js?v=3";
+	import def from "https://api.observablehq.com/d/6e8d9850958ed584@1507.js?v=3";
 	let james = new Runtime().module(def, name => {
-		  if (name === "viewof select") return new Inspector(document.querySelector("#observablehq-viewof-select-f4a77210"));
-		  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-f4a77210"));
-		  if (name === "map") return new Inspector(document.querySelector("#observablehq-map-f4a77210"));
-		  return ["lines","labels","height","width0","sideeffect"].includes(name);
-		});
+	  if (name === "viewof select") return new Inspector(document.querySelector("#observablehq-viewof-select-9fb4453d"));
+	  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-9fb4453d"));
+	  if (name === "map") return new Inspector(document.querySelector("#observablehq-map-9fb4453d"));
+	  return ["lines","labels","height","width0","Filter_CTE","Filter_Companies","Filter_STEM","Filter_Academies","Filter_Colleges","Filter_CC","sideeffect"].includes(name);
+	});
 
 
 	let w = 500;
