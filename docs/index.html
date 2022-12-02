@@ -1,5 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+<style>
+  .wrapper {
+    position: relative;
+  }
+
+  .legend {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+</style>
 
 <head>
   <title>Bio Science Demo</title>
@@ -15,7 +26,8 @@
 
 <body>
 
-  <div class="jumbotron text-center" style="background-image: https://raw.githubusercontent.com/cs7290/bioscience/main/imgs/maine-seacoast.jpg; background-size:100% 100%;">
+  <div class="jumbotron text-center"
+    style="background-image: https://raw.githubusercontent.com/cs7290/bioscience/main/imgs/maine-seacoast.jpg; background-size:100% 100%;">
     <h1 style="color: white;">Welcome to our Maine Bio-science demo page</h1>
     <p></p>
   </div>
@@ -24,19 +36,38 @@
       <div class="col-sm">
         <h3 class="text-center">James' visualization</h3>
         <p class="text-center">Curriculum Path</p>
-        <p class="text-center">Shows the Path of selected specialization based on dummy data.  <br>
-Hierarchy of graph is &lt;[Maine STEM Schools, Academies, Maine CTEs] - Community Colleges - Colleges - [Companies]&gt;</p>
-	<div id="wrapper">
-		<div id="observablehq-viewof-select-9fb4453d"></div>
-		<div class="row">
-			<div class="col-sm">
-				<div id="observablehq-map-9fb4453d"></div>
-			</div>
-			<div class="col-sm">
-				<div id="observablehq-chart-9fb4453d"></div>
-			</div>
-		</div>
-	</div>
+        <p class="text-center">Shows the Path of selected specialization based on dummy data. <br>
+          Hierarchy of graph is &lt;[Maine STEM Schools, Academies, Maine CTEs] - Community Colleges - Colleges -
+          [Companies]&gt;</p>
+        <div id="wrapper">
+          <div id="observablehq-viewof-select-9fb4453d"></div>
+          <div class="row">
+            <div class="col-sm">
+              <div class="wrapper">
+                <div id="observablehq-map-9fb4453d"></div>
+                <div class='legend'>
+                  <svg width="300" height="150">
+                    <circle cx="40" cy="10" r="6" fill="yellow"></circle>
+                    <text x="80" y="15" font-family="Verdana">STEM Schools</text>
+                    <circle cx="40" cy="25" r="6" fill="green"></circle>
+                    <text x="80" y="30" font-family="Verdana">Academies</text>
+                    <circle cx="40" cy="40" r="6" fill="red"></circle>
+                    <text x="80" y="45" font-family="Verdana">CTE's</text>
+                    <circle cx="40" cy="55" r="6" fill="purple"></circle>
+                    <text x="80" y="60" font-family="Verdana">Community Colleges</text>
+                    <circle cx="40" cy="70" r="6" fill="orange"></circle>
+                    <text x="80" y="75" font-family="Verdana">Colleges</text>
+                    <circle cx="40" cy="85" r="6" fill="blue"></circle>
+                    <text x="80" y="90" font-family="Verdana">Companies</text>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm">
+              <div id="observablehq-chart-9fb4453d"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="row">
@@ -48,23 +79,23 @@ Hierarchy of graph is &lt;[Maine STEM Schools, Academies, Maine CTEs] - Communit
       </div>
     </div>
     <div class="row">
-    	<div class="col">
-      		<h3 class="text-center">Jack's visualization</h3>
-      		<p class="text-center">Title</p>
-      		<p class="text-center">Hover and Click for details</p>
-      		<div id="wrapper">
-			<div id="observablehq-viewof-select-9fb4453d"></div>
-				<div class="row">
-					<div class="col-sm">
-						<div id="map"></div>
-					</div>
-					<div class="col-sm">
-						<div id="graph"></div>
-					</div>
-				</div>
-			</div>
-    		</div>
-  	</div>
+      <div class="col">
+        <h3 class="text-center">Jack's visualization</h3>
+        <p class="text-center">Title</p>
+        <p class="text-center">Hover and Click for details</p>
+        <div id="wrapper">
+          <div id="observablehq-viewof-select-9fb4453d"></div>
+          <div class="row">
+            <div class="col-sm">
+              <div id="map"></div>
+            </div>
+            <div class="col-sm">
+              <div id="graph"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="row">
       <div class="col-sm">
         <h3 class="text-center"><strong>Bioscience Organizational Hubs</strong></h3>
@@ -127,16 +158,16 @@ Hierarchy of graph is &lt;[Maine STEM Schools, Academies, Maine CTEs] - Communit
   });
 
   // Embedding James' Notebook
-	import def from "https://api.observablehq.com/d/6e8d9850958ed584@1507.js?v=3";
-	let james = new Runtime().module(def, name => {
-	  if (name === "viewof select") return new Inspector(document.querySelector("#observablehq-viewof-select-9fb4453d"));
-	  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-9fb4453d"));
-	  if (name === "map") return new Inspector(document.querySelector("#observablehq-map-9fb4453d"));
-	  return ["lines","labels","height","width0","Filter_CTE","Filter_Companies","Filter_STEM","Filter_Academies","Filter_Colleges","Filter_CC","sideeffect"].includes(name);
-	});
+  import def from "https://api.observablehq.com/d/6e8d9850958ed584@1507.js?v=3";
+  let james = new Runtime().module(def, name => {
+    if (name === "viewof select") return new Inspector(document.querySelector("#observablehq-viewof-select-9fb4453d"));
+    if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-9fb4453d"));
+    if (name === "map") return new Inspector(document.querySelector("#observablehq-map-9fb4453d"));
+    return ["lines", "labels", "height", "width0", "Filter_CTE", "Filter_Companies", "Filter_STEM", "Filter_Academies", "Filter_Colleges", "Filter_CC", "sideeffect"].includes(name);
+  });
 
 
-	let w = 500;
-	let div = document.getElementById('wrapper')
-	james.redefine('width', w)
+  let w = 500;
+  let div = document.getElementById('wrapper')
+  james.redefine('width', w)
 </script>
