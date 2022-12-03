@@ -88,6 +88,16 @@
           <div class="row">
             <div class="col-sm">
               <div id="map"></div>
+              <div class='legend'>
+                  <svg width="300" height="150">
+                    <circle cx="40" cy="55" r="6" fill="red"></circle>
+                    <text x="80" y="60" font-family="Verdana">Start-up</text>
+                    <circle cx="40" cy="70" r="6" fill="blue"></circle>
+                    <text x="80" y="75" font-family="Verdana">Mid Size</text>
+                    <circle cx="40" cy="85" r="6" fill="green"></circle>
+                    <text x="80" y="90" font-family="Verdana">Large Size</text>
+                  </svg>
+                </div>
             </div>
             <div class="col-sm">
               <div id="graph"></div>
@@ -140,8 +150,9 @@
   import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 
   // Your notebook, compiled as an ES module.
-  import notebook from "https://api.observablehq.com/d/8df663d207459709.js?v=3";
+  import notebook from "https://api.observablehq.com/d/a87ed5abd750078a.js?v=3";
 
+  // Embedding James' Notebook
   // Load the notebook, observing its cells with a default Inspector
   // that simply renders the value of each cell into the provided DOM node.
   new Runtime().module(notebook, name => {
