@@ -73,9 +73,21 @@
     <div class="row">
       <div class="col-sm">
         <h3 class="text-center">Aaron's visualization</h3>
-        <p class="text-center">Title</p>
-        <p class="text-center">Short Description</p>
-        <div id="Aaron"></div>
+        <p class="text-center">Academic Collapsible Tree</p>
+        <p class="text-center">Click nodes to expand. Data from <a
+          href="https://docs.google.com/spreadsheets/d/1X8SNuN75ASXs34Opg2vUDFGSSsaviK9oXn0tYE-ppKo/edit?usp=share_link">
+          here</a>.</p>
+        <div id="Aaron">
+          <div id="observablehq-chart-2f4fc44b"></div>
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+          <script type="module">
+            import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+            import define from "https://api.observablehq.com/@class/bioscience-tree@170.js?v=3";
+            new Runtime().module(define, name => {
+              if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-2f4fc44b"));
+              });
+          </script>
+        </div>
       </div>
     </div>
     <div class="row">
