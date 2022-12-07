@@ -38,33 +38,29 @@
         <p class="text-center">Curriculum Path</p>
         <p class="text-center">Shows the Path of selected specialization based on dummy data. <br>
           Hierarchy of graph is &lt;[Maine STEM Schools, Academies, Maine CTEs] - Community Colleges - Colleges -
-          [Companies]&gt;</p>
+          Companies&gt;</p>
         <div id="wrapper">
-          <div id="observablehq-viewof-select-9fb4453d"></div>
+          <div id="observablehq-viewof-select-09d76e64"></div>
           <div class="row">
             <div class="col-sm">
               <div class="wrapper">
-                <div id="observablehq-map-9fb4453d"></div>
+                <div id="observablehq-map-09d76e64"></div>
                 <div class='legend'>
                   <svg width="300" height="150">
-                    <circle cx="40" cy="10" r="6" fill="yellow"></circle>
-                    <text x="80" y="15" font-family="Verdana">STEM Schools</text>
-                    <circle cx="40" cy="25" r="6" fill="green"></circle>
-                    <text x="80" y="30" font-family="Verdana">Academies</text>
                     <circle cx="40" cy="40" r="6" fill="red"></circle>
-                    <text x="80" y="45" font-family="Verdana">CTE's</text>
+                    <text x="80" y="45" font-family="Verdana">K-12</text>
                     <circle cx="40" cy="55" r="6" fill="purple"></circle>
-                    <text x="80" y="60" font-family="Verdana">Community Colleges</text>
+                    <text x="80" y="60" font-family="Verdana">Community College</text>
                     <circle cx="40" cy="70" r="6" fill="orange"></circle>
-                    <text x="80" y="75" font-family="Verdana">Colleges</text>
+                    <text x="80" y="75" font-family="Verdana">University</text>
                     <circle cx="40" cy="85" r="6" fill="blue"></circle>
-                    <text x="80" y="90" font-family="Verdana">Companies</text>
+                    <text x="80" y="90" font-family="Verdana">Company</text>
                   </svg>
                 </div>
               </div>
             </div>
             <div class="col-sm">
-              <div id="observablehq-chart-9fb4453d"></div>
+              <div id="observablehq-chart-09d76e64"></div>
             </div>
           </div>
         </div>
@@ -155,13 +151,13 @@
   });
 
   // Embedding James' Notebook
-  import def from "https://api.observablehq.com/d/6e8d9850958ed584@1507.js?v=3";
+  import def from "https://api.observablehq.com/@cs7290/bio-science-curriculum-path-v5.js?v=3";
   let james = new Runtime().module(def, name => {
-    if (name === "viewof select") return new Inspector(document.querySelector("#observablehq-viewof-select-9fb4453d"));
-    if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-9fb4453d"));
-    if (name === "map") return new Inspector(document.querySelector("#observablehq-map-9fb4453d"));
-    return ["lines", "labels", "height", "width0", "Filter_CTE", "Filter_Companies", "Filter_STEM", "Filter_Academies", "Filter_Colleges", "Filter_CC", "sideeffect"].includes(name);
-  });
+  if (name === "viewof select") return new Inspector(document.querySelector("#observablehq-viewof-select-09d76e64"));
+  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-09d76e64"));
+  if (name === "map") return new Inspector(document.querySelector("#observablehq-map-09d76e64"));
+  return ["lines","labels","height","width0","Filter_K12","Filter_Companies","Filter_Colleges","Filter_CC","sideeffect"].includes(name);
+});
 
 
   let w = 500;
