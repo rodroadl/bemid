@@ -36,7 +36,7 @@
             <button class="nav-link active" id="nav-roadmap-tab" data-bs-toggle="tab" data-bs-target="#nav-roadmap"
                 type="button" role="tab" aria-controls="nav-home" aria-selected="true">Study Roadmap</button>
             <button class="nav-link" id="nav-tree-tab" data-bs-toggle="tab" data-bs-target="#nav-tree"
-                type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Hierarchy of School</button>
+                type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Academic Collapsible Tree</button>
             <button class="nav-link" id="nav-network-tab" data-bs-toggle="tab" data-bs-target="#nav-network"
                 type="button" role="tab" aria-controls="nav-network" aria-selected="false">Business Network</button>
         </div>
@@ -88,10 +88,32 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm">
-                        <h3 class="text-center">Aaron's visualization</h3>
-                        <p class="text-center">Title</p>
-                        <p class="text-center">Short Description</p>
-                        <div id="Aaron"></div>
+                        <h3 class="text-center">Academic Collapsible Tree</h3>
+                        <p class="text-center">Shows the hierarchical relationship between and location of Maine
+                            schools.</p>
+                        <p class="text-center">The tree below the map can be expanded to display academic institution
+                        types, individual schools, and educational programs within those schools. That dummy data is imported
+                            from <a href="https://docs.google.com/spreadsheets/d/1dIol4lwkCH--nbRmlacVVbiOhaW_OoCG-bKq1HX0cCQ/edit#gid=692350962">
+                                this Google Sheet</a>, while the collapsible tree code is imported from
+                            <a href="https://observablehq.com/@aaronfihn/bioscience-collapsible-tree-1-0-0@596">
+                                this ObservableHQ notebook.</a> Any schools visible in the collapsible tree will be
+                        highlighted on the map with a red dot.</p>
+                        <div id="Aaron">
+                            <div id="observablehq-viewof-map-a48d28b2"></div>
+                            <p>Click the "Institution Type" nod below to expand the academic tree into school categories.
+                            These nodes can be expanded into individual schools, which can be further expanded into
+                            school academic programs.</p>
+                            <div id="observablehq-viewof-chart-a48d28b2"></div>
+                            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+                                <script type="module">
+                                    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+                                    import define from "https://api.observablehq.com/@aaronfihn/bioscience-collapsible-tree-1-0-0.js?v=3";
+                                    new Runtime().module(define, name => {
+                                        if (name === "viewof map") return new Inspector(document.querySelector("#observablehq-viewof-map-a48d28b2"));
+                                        if (name === "viewof chart") return new Inspector(document.querySelector("#observablehq-viewof-chart-a48d28b2"));
+                                    });
+                                </script>
+                        </div>
                     </div>
                 </div>
             </div>
