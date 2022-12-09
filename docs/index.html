@@ -1,166 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <style>
-  .wrapper {
-    position: relative;
-  }
+    .wrapper {
+        position: relative;
+    }
 
-  .legend {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-  }
+    .legend {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
 </style>
 
 <head>
-  <title>Bio Science Demo</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-  <link href="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css" rel="stylesheet" />
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <title>BioScience Dashboard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link href="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
-
-  <div class="jumbotron text-center"
-    style="background-image: https://raw.githubusercontent.com/cs7290/bioscience/main/imgs/maine-seacoast.jpg; background-size:100% 100%;">
-    <h1 style="color: white;">Welcome to our Maine Bio-science demo page</h1>
-    <p></p>
-  </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm">
-        <h3 class="text-center">James' visualization</h3>
-        <p class="text-center">Curriculum Path</p>
-        <p class="text-center">Shows the Path of selected specialization based on dummy data. <br>
-          Hierarchy of graph is &lt;[Maine STEM Schools, Academies, Maine CTEs] - Community Colleges - Colleges -
-          Companies&gt;</p>
-        <div id="wrapper">
-          <div id="observablehq-viewof-select-09d76e64"></div>
-          <div class="row">
-            <div class="col-sm">
-              <div class="wrapper">
-                <div id="observablehq-map-09d76e64"></div>
-                <div class='legend'>
-                  <svg width="300" height="150">
-                    <circle cx="40" cy="40" r="6" fill="red"></circle>
-                    <text x="80" y="45" font-family="Verdana">K-12</text>
-                    <circle cx="40" cy="55" r="6" fill="purple"></circle>
-                    <text x="80" y="60" font-family="Verdana">Community College</text>
-                    <circle cx="40" cy="70" r="6" fill="orange"></circle>
-                    <text x="80" y="75" font-family="Verdana">University</text>
-                    <circle cx="40" cy="85" r="6" fill="blue"></circle>
-                    <text x="80" y="90" font-family="Verdana">Company</text>
-                  </svg>
+    <div class="jumbotron text-center mb-0" style="background-image: url(https://raw.githubusercontent.com/cs7290/bioscience/main/imgs/maine-seacoast.jpg); background-size: 100%;">
+        <h1 style="color: white;">Bioscience Dashboard</h1>
+    </div>
+    <nav>
+        <div class="nav nav-tabs justify-content-center nav-fill" id="nav-tab" role="tablist">
+            <button class="nav-link active" id="nav-roadmap-tab" data-bs-toggle="tab" data-bs-target="#nav-roadmap"
+                type="button" role="tab" aria-controls="nav-home" aria-selected="true">Study Roadmap</button>
+            <button class="nav-link" id="nav-tree-tab" data-bs-toggle="tab" data-bs-target="#nav-tree"
+                type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Hierarchy of School</button>
+            <button class="nav-link" id="nav-network-tab" data-bs-toggle="tab" data-bs-target="#nav-network"
+                type="button" role="tab" aria-controls="nav-network" aria-selected="false">Business Network</button>
+        </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-roadmap" role="tabpanel" aria-labelledby="nav-roadmap-tab">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm">
+                        <h3 class="text-center">Study Roadmap</h3>
+                        <p class="text-center">Shows the Path of selected specialization based on dummy data. <br>
+                            Hierarchy of graph is &lt;[Maine STEM Schools, Academies, Maine CTEs] - Community Colleges -
+                            Colleges -
+                            Companies&gt;</p>
+                        <div id="wrapper">
+                            <div id="observablehq-viewof-select-09d76e64"></div>
+                            <div class="row">
+                                <div class="col-sm">
+                                    <div class="wrapper">
+                                        <div id="observablehq-map-09d76e64"></div>
+                                        <div class='legend'>
+                                            <svg width="300" height="150">
+                                                <circle cx="40" cy="10" r="6" fill="yellow"></circle>
+                                                <text x="80" y="15" font-family="Verdana">STEM Schools</text>
+                                                <circle cx="40" cy="25" r="6" fill="green"></circle>
+                                                <text x="80" y="30" font-family="Verdana">Academies</text>
+                                                <circle cx="40" cy="40" r="6" fill="red"></circle>
+                                                <text x="80" y="45" font-family="Verdana">CTE's</text>
+                                                <circle cx="40" cy="55" r="6" fill="purple"></circle>
+                                                <text x="80" y="60" font-family="Verdana">Community Colleges</text>
+                                                <circle cx="40" cy="70" r="6" fill="orange"></circle>
+                                                <text x="80" y="75" font-family="Verdana">Colleges</text>
+                                                <circle cx="40" cy="85" r="6" fill="blue"></circle>
+                                                <text x="80" y="90" font-family="Verdana">Companies</text>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm">
+                                    <div id="observablehq-chart-09d76e64"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-            <div class="col-sm">
-              <div id="observablehq-chart-09d76e64"></div>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm">
-        <h3 class="text-center">Aaron's visualization</h3>
-        <p class="text-center">Academic Collapsible Tree</p>
-        <p class="text-center">Click nodes to expand. Data from <a
-          href="https://docs.google.com/spreadsheets/d/1X8SNuN75ASXs34Opg2vUDFGSSsaviK9oXn0tYE-ppKo/edit?usp=share_link">
-          here</a>.</p>
-        <div id="Aaron">
-          <div id="observablehq-chart-2f4fc44b"></div>
-          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
-          <script type="module">
-            import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-            import define from "https://api.observablehq.com/@class/bioscience-tree@170.js?v=3";
-            new Runtime().module(define, name => {
-              if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-2f4fc44b"));
-              });
-          </script>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <h3 class="text-center">Jack's visualization</h3>
-        <p class="text-center">Title</p>
-        <p class="text-center">Hover and Click for details</p>
-        <div id="wrapper">
-          <div id="observablehq-viewof-select-9fb4453d"></div>
-          <div class="row">
-            <div class="col-sm">
-              <div id="map"></div>
-              <div class='legend'>
-                <svg width="300" height="150">
-                  <circle cx="40" cy="55" r="6" fill="red"></circle>
-                  <text x="80" y="60" font-family="Verdana">Start-up</text>
-                  <circle cx="40" cy="70" r="6" fill="blue"></circle>
-                  <text x="80" y="75" font-family="Verdana">Mid Size</text>
-                  <circle cx="40" cy="85" r="6" fill="green"></circle>
-                  <text x="80" y="90" font-family="Verdana">Large Size</text>
-                </svg>
-              </div>
+        <div class="tab-pane fade" id="nav-tree" role="tabpanel" aria-labelledby="nav-tree-tab">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm">
+                        <h3 class="text-center">Aaron's visualization</h3>
+                        <p class="text-center">Title</p>
+                        <p class="text-center">Short Description</p>
+                        <div id="Aaron"></div>
+                    </div>
+                </div>
             </div>
-            <div class="col-sm">
-              <div id="graph"></div>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
+        <div class="tab-pane fade" id="nav-network" role="tabpanel" aria-labelledby="nav-network-tab">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h3 class="text-center">Business Network</h3>
+                        <p class="text-center">Hover and Click for details</p>
+                        <div id="wrapper">
+                            <div class="row">
+                                <div class="col-sm">
+                                    <div id="map"></div>
+                                    <div class='legend'>
+                                        <svg width="300" height="150">
+                                            <circle cx="40" cy="55" r="6" fill="red"></circle>
+                                            <text x="80" y="60" font-family="Verdana">Start-up</text>
+                                            <circle cx="40" cy="70" r="6" fill="blue"></circle>
+                                            <text x="80" y="75" font-family="Verdana">Mid Size</text>
+                                            <circle cx="40" cy="85" r="6" fill="green"></circle>
+                                            <text x="80" y="90" font-family="Verdana">Large Size</text>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="col-sm">
+                                    <div id="graph"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <!-- Footer -->
+        <footer class="page-footer font-small blue " style="background-color: #D3D3D3;">
 
-  </div>
-  <!-- Footer -->
-  <footer class="page-footer font-small blue " style="background-color: #D3D3D3;">
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">© 2022 Copyright:
+                <a href="/"> MDBootstrap.com</a>
+            </div>
+            <!-- Copyright -->
 
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2022 Copyright:
-      <a href="/"> MDBootstrap.com</a>
-    </div>
-    <!-- Copyright -->
-
-  </footer>
-  <!-- Footer -->
-
+        </footer>
+        <!-- Footer -->
 </body>
 
 </html>
 
 <script type="module">
 
-  // Load the Observable runtime and inspector.
-  import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+    // Load the Observable runtime and inspector.
+    // Your notebook, compiled as an ES module.
+    import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 
-  // Your notebook, compiled as an ES module.
-  import notebook from "https://api.observablehq.com/d/a87ed5abd750078a.js?v=3";
+    // Embedding Study Roadmap Notebook
+    import define0 from "https://api.observablehq.com/@cs7290/bio-science-curriculum-path-v5.js?v=3";
+ 	 let james = new Runtime().module(define0, name => {
+ 	 if (name === "viewof select") return new Inspector(document.querySelector("#observablehq-viewof-select-09d76e64"));
+ 	 if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-09d76e64"));
+ 	 if (name === "map") return new Inspector(document.querySelector("#observablehq-map-09d76e64"));
+ 	 return ["lines","labels","height","width0","Filter_K12","Filter_Companies","Filter_Colleges","Filter_CC","sideeffect"].includes(name);
+	});
 
-  // Embedding James' Notebook
-  // Load the notebook, observing its cells with a default Inspector
-  // that simply renders the value of each cell into the provided DOM node.
-  new Runtime().module(notebook, name => {
+    
+//    import define1 from "https://api.observablehq.com/@class/bioscience-tree@170.js?v=3";
+//    new Runtime().module(define1, name => {
+//        if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-2f4fc44b"));
+//    });
+
+    // Embedding Business Network Notebook
+    // Load the notebook, observing its cells with a default Inspector
+    // that simply renders the value of each cell into the provided DOM node.
+    import define2 from "https://api.observablehq.com/d/a87ed5abd750078a.js?v=3";
+    new Runtime().module(define2, name => {
     if (name === "chart") return new Inspector(document.querySelector("#graph"));
     if (name === "mymap") return new Inspector(document.querySelector("#map"));
     if (name === "map_filter") return true;
   });
 
-  // Embedding James' Notebook
-  import def from "https://api.observablehq.com/@cs7290/bio-science-curriculum-path-v5.js?v=3";
-  let james = new Runtime().module(def, name => {
-  if (name === "viewof select") return new Inspector(document.querySelector("#observablehq-viewof-select-09d76e64"));
-  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-09d76e64"));
-  if (name === "map") return new Inspector(document.querySelector("#observablehq-map-09d76e64"));
-  return ["lines","labels","height","width0","Filter_K12","Filter_Companies","Filter_Colleges","Filter_CC","sideeffect"].includes(name);
-});
+    
 
 
-  let w = 500;
-  let div = document.getElementById('wrapper')
-  james.redefine('width', w)
+    let w = 500;
+    let div = document.getElementById('wrapper')
+    james.redefine('width', w)
+
+    $(document).ready(function(){
+      $('button[data-bs-toggle="tab"]').on('shown.bs.tab', function(event){
+        window.dispatchEvent(new Event('resize'));
+      });
+    });
+    
 </script>
