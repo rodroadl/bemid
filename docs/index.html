@@ -109,7 +109,7 @@
                                     import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
                                     import define from "https://api.observablehq.com/@aaronfihn/bioscience-collapsible-tree-1-0-0.js?v=3";
                                     new Runtime().module(define, name => {
-                                        if (name === "viewof vieweof map") return new Inspector(document.querySelector("#observablehq-viewof-map-a48d28b2"));
+                                        if (name === "viewof map") return new Inspector(document.querySelector("#observablehq-viewof-map-a48d28b2"));
                                         if (name === "viewof chart") return new Inspector(document.querySelector("#observablehq-viewof-chart-a48d28b2"));
                                     });
                                 </script>
@@ -191,8 +191,9 @@
     import define2 from "https://api.observablehq.com/d/a87ed5abd750078a.js?v=3";
     new Runtime().module(define2, name => {
     if (name === "chart") return new Inspector(document.querySelector("#graph"));
-    if (name === "mymap") return new Inspector(document.querySelector("#map"));
+    if (name === "viewof mymap") return new Inspector(document.querySelector("#map"));
     if (name === "map_filter") return true;
+    return ["Filter_Companies"].includes(name);
   });
 
     
