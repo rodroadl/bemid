@@ -6,15 +6,13 @@ The Bioscience Dashboard found at https://cs7290.github.io/bioscience/ presents 
 Each of the following notebooks are linked and utilize eachother.  The data source is loaded within the Unifying Data Format notebook and imported to the other notebooks.  To update the data, attach new data within the Unifying Data Format notebook, update the cell under the "Data" header, and ensure the import cells within the Cirriculum Path and Bioscience Map notebooks are updated with the new source.  
 
 [Bio Science - Curriculum Path - v5](https://observablehq.com/@cs7290/bio-science-curriculum-path-v5)
-
-[Bioscience Map of Maine - v2](https://observablehq.com/@cs7290/bioscience-map-of-maine-v2)
-
-[Unifying Data Format](https://observablehq.com/@cs7290/unifying-data-format)
+∟[Bioscience Map of Maine - v2](https://observablehq.com/@cs7290/bioscience-map-of-maine-v2)
+∟[Unifying Data Format](https://observablehq.com/@cs7290/unifying-data-format)
 
 ### Data Source:
 [Dummy with Coords.xlsx](https://github.com/cs7290/bioscience/blob/56278b5f423b026808c6d14ac7fe68d1be940bbd/data/Dummy%20with%20Coords.xlsx)
 or
-[Google Sheet 1](https://docs.google.com/spreadsheets/d/1an294Zl18uYTE8s1F6WDqgOvD9jiiMB6/edit?usp=sharing&ouid=104079180438478329591&rtpof=true&sd=true)
+[bioscience_input_0.11](https://docs.google.com/spreadsheets/d/1dIol4lwkCH--nbRmlacVVbiOhaW_OoCG-bKq1HX0cCQ/edit?usp=sharing)
 
 
 ## Academic Collapsible Tree
