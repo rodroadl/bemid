@@ -3,13 +3,13 @@ The Bioscience Dashboard found at https://cs7290.github.io/bioscience/ presents 
 
 ## Study Roadmap
 ### Observable Notebooks
-Each of the following notebooks are linked and utilize eachother.  The data source is loaded within the Bioscience Map of Maine notebook and imported to the other notebooks.  To update the data, attach new data within the Bioscience Map of Maine notebook, update the cell under the "Data" header, and ensure the import cells within the Processing Data and Cirriculum Path notebooks are updated with the new source.  
+Each of the following notebooks are linked and utilize eachother.  The data source is loaded within the Unifying Data Format notebook and imported to the other notebooks.  To update the data, attach new data within the Unifying Data Format notebook, update the cell under the "Data" header, and ensure the import cells within the Cirriculum Path and Bioscience Map notebooks are updated with the new source.  
 
-[Bio Science - Curriculum Path - v4](https://observablehq.com/d/6e8d9850958ed584)
+[Bio Science - Curriculum Path - v5](https://observablehq.com/@cs7290/bio-science-curriculum-path-v5)
 
-[Bioscience Map of Maine](https://observablehq.com/@derekgmuse/bioscience-map)
+[Bioscience Map of Maine - v2](https://observablehq.com/@cs7290/bioscience-map-of-maine-v2)
 
-[Processing Data](https://observablehq.com/@cs7290/processing-data)
+[Unifying Data Format](https://observablehq.com/@cs7290/unifying-data-format)
 
 ### Data Source:
 [Dummy with Coords.xlsx](https://github.com/cs7290/bioscience/blob/56278b5f423b026808c6d14ac7fe68d1be940bbd/data/Dummy%20with%20Coords.xlsx)
