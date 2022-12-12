@@ -18,6 +18,7 @@ or
 ## Academic Collapsible Tree
 ### Observable Notebook
 To update the data, create a new google sheet following the format of the current sheet attached below.  In the Bioscience: Collapsible Tree notebook, update the link used within the getTsvUrl cell under the "Appendix 1: Data Import" header.  
+
 [Bioscience: Collapsible Tree](https://observablehq.com/@aaronfihn/bioscience-collapsible-tree-1-0-0)
 
 ### Data Source:
