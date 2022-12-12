@@ -30,7 +30,10 @@ To update the data, create a new google sheet following the format of the curren
 ## Business Network 
 ### Observable Notebook
 [Bioscience Company Map and Graph](https://observablehq.com/d/a87ed5abd750078a)
+The map on the left is connected to the force-directed graph on the right 2-way. 
+Clicking on the map data points can update the graph.
+And clicking on the graph data points will highlight the points directly connected as well as filter the map data points (only if the point clicked is the sector dot in blue). 
 
 ### Data Source
-[Copy of Bioscience Map of Maine](https://github.com/cs7290/bioscience/blob/main/data/Copy%20of%20Bioscience%20Map%20of%20Maine%20company-town.xlsx)
+[Google Sheet - Companies Sheet](https://docs.google.com/spreadsheets/d/1dIol4lwkCH--nbRmlacVVbiOhaW_OoCG-bKq1HX0cCQ)
 
