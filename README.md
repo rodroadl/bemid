@@ -14,6 +14,11 @@ Each of the following notebooks are linked and utilize eachother.  The data sour
 ### Data Source:
 [bioscience_input_0.11](https://docs.google.com/spreadsheets/d/1dIol4lwkCH--nbRmlacVVbiOhaW_OoCG-bKq1HX0cCQ/edit?usp=sharing)
 
+Above data is dummy data to make the prototype, as long as data follows such format, it is replaceble.
+
+Below is schema for the dummy data:
+
+![schema](https://github.com/cs7290/bioscience/blob/main/imgs/image.png)
 
 ## Academic Collapsible Tree
 ### Observable Notebook
