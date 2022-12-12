@@ -31,5 +31,5 @@ To update the data, create a new google sheet following the format of the curren
 
 ### Data Source
 Need to update link here
-[Copy of Bioscience Map of Maine](https://observablehq.com/d/a87ed5abd750078a)
+[Copy of Bioscience Map of Maine](https://github.com/cs7290/bioscience/blob/main/data/Copy%20of%20Bioscience%20Map%20of%20Maine%20company-town.xlsx)
 
