@@ -34,7 +34,7 @@ To update the data, create a new google sheet following the format of the curren
 ### Observable Notebook
 The map on the left is connected to the force-directed graph on the right 2-way. 
 Clicking on the map data points can update the graph.
-And clicking on the graph data points will highlight the points directly connected as well as filter the map data points (only if the point clicked is the sector dot in blue).  To update the data, edit the 'Company' tab of google sheet provided below.
+And clicking on the graph data points will highlight the points directly connected as well as filter the map data points (only if the point clicked is the sector dot in blue).  
 
 [Bioscience Company Map and Graph](https://observablehq.com/d/a87ed5abd750078a)
 
