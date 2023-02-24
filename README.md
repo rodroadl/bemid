@@ -1,20 +1,20 @@
 # Related work
 - [Search for Maine schools](https://neo.maine.gov/DOE/neo/Supersearch/ContactSearch/SearchForMaineSchools)
- - finicky
+  - finicky
 - [facilities map](https://gmri.org/projects/facilities-resource-map/)
- - research institute
- - support map/filter/sort
+  - research institute
+  - support map/filter/sort
 - [jobsplan dashboard](dashboard)
- - jobs plan investement dashboard
- - the one I, James, was talking about
- - map/filter/sort
+  - jobs plan investement dashboard
+  - the one I, James, was talking about
+  - map/filter/sort
 - [BIOME](https://biomaine.org/member-directory/)
- - not a dashboard
- - Trade organization for biosciences in the state -- membership driven
- - Good for identifying a cohort of companies for plotting
+  - not a dashboard
+  - Trade organization for biosciences in the state -- membership driven
+  - Good for identifying a cohort of companies for plotting
 - [EMSTAR](https://www.lifesciencesmaine.com/about)
- - Midcoast group -- beginning to organize things
- - Information underneath the names is more relevant for filtering, etc.
+  - Midcoast group -- beginning to organize things
+  - Information underneath the names is more relevant for filtering, etc.
 * [Aileen's site](https://teel.sites.northeastern.edu/life-sciences-in-maine/) in early stages
 * Would like a GUI for intellectual capital rather than just brick and mortar (which is what's there now)
 * Dataviz ideas
