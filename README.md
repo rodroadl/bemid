@@ -4,7 +4,7 @@
 - [facilities map](https://gmri.org/projects/facilities-resource-map/)
   - research institute
   - support map/filter/sort
-- [jobsplan dashboard](dashboard)
+- [jobsplan dashboard](https://maine.gov/jobsplan/dashboard)
   - jobs plan investement dashboard
   - the one I, James, was talking about
   - map/filter/sort
