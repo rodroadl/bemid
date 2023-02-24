@@ -1,3 +1,27 @@
+# Related work
+- [Search for Maine schools](https://neo.maine.gov/DOE/neo/Supersearch/ContactSearch/SearchForMaineSchools)
+ - finicky
+- [facilities map](https://gmri.org/projects/facilities-resource-map/)
+ - research institute
+ - support map/filter/sort
+- [jobsplan dashboard](dashboard)
+ - jobs plan investement dashboard
+ - the one I, James, was talking about
+ - map/filter/sort
+- [BIOME](https://biomaine.org/member-directory/)
+ - not a dashboard
+ - Trade organization for biosciences in the state -- membership driven
+ - Good for identifying a cohort of companies for plotting
+- [EMSTAR](https://www.lifesciencesmaine.com/about)
+ - Midcoast group -- beginning to organize things
+ - Information underneath the names is more relevant for filtering, etc.
+* [Aileen's site](https://teel.sites.northeastern.edu/life-sciences-in-maine/) in early stages
+* Would like a GUI for intellectual capital rather than just brick and mortar (which is what's there now)
+* Dataviz ideas
+  * [Force-directed graph](https://observablehq.com/@d3/force-directed-graph?collection=@d3/d3-drag)
+  * [Obama budget](https://archive.nytimes.com/www.nytimes.com/interactive/2012/02/13/us/politics/2013-budget-proposal-graphic.html)
+  * [Divisibility network](https://observablehq.com/@mbostock/divisibility-network)
+  
 # Bioscience in Maine
 The Bioscience Dashboard found at https://cs7290.github.io/bioscience/ presents three interactive visualizations: a Study Roadmap, an Academic Collapsible Tree, and a Business Network diagram.  Each of these visualizations have been built using Observable notebooks.  While not all data sets used come from real sources, the visualizations can be updated within Observable so long as the format of the data is consistent with the current structure.  Links to our notebooks as well as data sources for each visualization are provided below.
 
