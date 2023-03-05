@@ -28,169 +28,73 @@
 </head>
 
 <body>
-    <div class="jumbotron text-center mb-0" style="background-image: url(https://raw.githubusercontent.com/cs7290/bioscience/main/imgs/maine-seacoast.jpg); background-size: 100%;">
+    <div class="jumbotron text-center mb-0" style="background-color: black;">
         <h1 style="color: white;">Bioscience Dashboard</h1>
     </div>
-    <nav>
-        <div class="nav nav-tabs justify-content-center nav-fill" id="nav-tab" role="tablist">
-            <button class="nav-link active" id="nav-roadmap-tab" data-bs-toggle="tab" data-bs-target="#nav-roadmap"
-                type="button" role="tab" aria-controls="nav-home" aria-selected="true">Study Roadmap</button>
-            <button class="nav-link" id="nav-tree-tab" data-bs-toggle="tab" data-bs-target="#nav-tree"
-                type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Academic Collapsible Tree</button>
-            <button class="nav-link" id="nav-network-tab" data-bs-toggle="tab" data-bs-target="#nav-network"
-                type="button" role="tab" aria-controls="nav-network" aria-selected="false">Business Network</button>
-        </div>
-    </nav>
-    <div class="tab-content" id="nav-tabContent">
-        <div class="tab-pane fade show active" id="nav-roadmap" role="tabpanel" aria-labelledby="nav-roadmap-tab">
-            <div class="container">
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <p class="text-left">
+                    <br>
+                    Shows the hierarchical relationship between and location of Maine
+                    schools.
+                    <br>
+                    <br>
+                    The tree below the map can be expanded to display academic institution
+                    types, individual schools, and educational programs within those schools. That dummy data is imported
+                    from <a href="https://docs.google.com/spreadsheets/d/1dIol4lwkCH--nbRmlacVVbiOhaW_OoCG-bKq1HX0cCQ/edit#gid=692350962">
+                        this Google Sheet</a>, while the collapsible tree code is imported from
+                    <a href="https://observablehq.com/@aaronfihn/bioscience-collapsible-tree-1-0-0@596">
+                        this ObservableHQ notebook.</a> Any schools visible in the collapsible tree will be
+                    highlighted on the map with a red dot.
+                    <br>
+                    <br>
+                    Click the "Institution Type" nod below to expand the academic tree into school categories.
+                    These nodes can be expanded into individual schools, which can be further expanded into
+                    school academic programs.
+                </p>
+
+                
                 <div class="row">
                     <div class="col-sm">
-                        <h3 class="text-center">Study Roadmap</h3>
-                        <p class="text-center">Shows the Path of selected specialization based on dummy data. <br>
-                            Hierarchy of graph is &lt;[Maine STEM Schools, Academies, Maine CTEs] - Community Colleges -
-                            Colleges -
-                            Companies&gt;</p>
-                        <div id="wrapper">
-                            <div id="observablehq-viewof-select-09d76e64"></div>
-                            <div class="row">
-                                <div class="col-sm">
-                                    <div class="wrapper">
-                                        <div id="observablehq-map-09d76e64"></div>
-                                        <div class='legend'>
-                                            <svg width="300" height="150">
-                                                <circle cx="40" cy="10" r="6" fill="yellow"></circle>
-                                                <text x="80" y="15" font-family="Verdana">STEM Schools</text>
-                                                <circle cx="40" cy="25" r="6" fill="green"></circle>
-                                                <text x="80" y="30" font-family="Verdana">Academies</text>
-                                                <circle cx="40" cy="40" r="6" fill="red"></circle>
-                                                <text x="80" y="45" font-family="Verdana">CTE's</text>
-                                                <circle cx="40" cy="55" r="6" fill="purple"></circle>
-                                                <text x="80" y="60" font-family="Verdana">Community Colleges</text>
-                                                <circle cx="40" cy="70" r="6" fill="orange"></circle>
-                                                <text x="80" y="75" font-family="Verdana">Colleges</text>
-                                                <circle cx="40" cy="85" r="6" fill="blue"></circle>
-                                                <text x="80" y="90" font-family="Verdana">Companies</text>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm">
-                                    <div id="observablehq-chart-09d76e64"></div>
-                                </div>
-                            </div>
-                        </div>
+                        <div id="observablehq-viewof-map-f30d7294"></div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="tab-pane fade" id="nav-tree" role="tabpanel" aria-labelledby="nav-tree-tab">
-            <div class="container">
-                <div class="row">
                     <div class="col-sm">
-                        <h3 class="text-center">Academic Collapsible Tree</h3>
-                        <p class="text-center">Shows the hierarchical relationship between and location of Maine
-                            schools.</p>
-                        <p class="text-center">The tree below the map can be expanded to display academic institution
-                        types, individual schools, and educational programs within those schools. That dummy data is imported
-                            from <a href="https://docs.google.com/spreadsheets/d/1dIol4lwkCH--nbRmlacVVbiOhaW_OoCG-bKq1HX0cCQ/edit#gid=692350962">
-                                this Google Sheet</a>, while the collapsible tree code is imported from
-                            <a href="https://observablehq.com/@aaronfihn/bioscience-collapsible-tree-1-0-0@596">
-                                this ObservableHQ notebook.</a> Any schools visible in the collapsible tree will be
-                        highlighted on the map with a red dot.</p>
-                        <div id="Aaron">
-                            <div id="observablehq-viewof-map-a48d28b2"></div>
-                            <p>Click the "Institution Type" nod below to expand the academic tree into school categories.
-                            These nodes can be expanded into individual schools, which can be further expanded into
-                            school academic programs.</p>
-                            <div id="observablehq-viewof-chart-a48d28b2"></div>
-                            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
-                                <script type="module">
-                                    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-                                    import define from "https://api.observablehq.com/@aaronfihn/bioscience-collapsible-tree-1-0-0.js?v=3";
-                                    new Runtime().module(define, name => {
-                                        if (name === "viewof map") return new Inspector(document.querySelector("#observablehq-viewof-map-a48d28b2"));
-                                        if (name === "viewof chart") return new Inspector(document.querySelector("#observablehq-viewof-chart-a48d28b2"));
-                                    });
-                                </script>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="tab-pane fade" id="nav-network" role="tabpanel" aria-labelledby="nav-network-tab">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <h3 class="text-center">Business Network</h3>
-                        <p class="text-center">Hover and Click for details</p>
-			<p class="text-center">Click the blue sector dots on the graph to filter the map points.</p>
                         <div id="wrapper">
-                            <div class="row">
-                                <div class="col-sm">
-                                    <div id="map"></div>
-                                    <div class='legend'>
-                                        <svg width="300" height="150">
-                                            <circle cx="40" cy="55" r="6" fill="red"></circle>
-                                            <text x="80" y="60" font-family="Verdana">Start-up</text>
-                                            <circle cx="40" cy="70" r="6" fill="blue"></circle>
-                                            <text x="80" y="75" font-family="Verdana">Mid Size</text>
-                                            <circle cx="40" cy="85" r="6" fill="green"></circle>
-                                            <text x="80" y="90" font-family="Verdana">Large Size</text>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div class="col-sm">
-                                    <div id="graph"></div>
-                                </div>
-                            </div>
+                            <div id="observablehq-viewof-chart-f30d7294"></div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
+    </div>
 </body>
 
 </html>
 
+
+<!--
+
+-->
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
 <script type="module">
-
-    // Load the Observable runtime and inspector.
-    // Your notebook, compiled as an ES module.
-    import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-
-    // Embedding Study Roadmap Notebook
-    import define0 from "https://api.observablehq.com/@cs7290/bio-science-curriculum-path-v5.js?v=3";
- 	 let james = new Runtime().module(define0, name => {
- 	 if (name === "viewof select") return new Inspector(document.querySelector("#observablehq-viewof-select-09d76e64"));
- 	 if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-09d76e64"));
- 	 if (name === "map") return new Inspector(document.querySelector("#observablehq-map-09d76e64"));
- 	 return ["lines","labels","height","width0","Filter_K12","Filter_Companies","Filter_Colleges","Filter_CC","sideeffect"].includes(name);
-	});
-
-    
-//    import define1 from "https://api.observablehq.com/@class/bioscience-tree@170.js?v=3";
-//    new Runtime().module(define1, name => {
-//        if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-2f4fc44b"));
-//    });
-
-    // Embedding Business Network Notebook
-    // Load the notebook, observing its cells with a default Inspector
-    // that simply renders the value of each cell into the provided DOM node.
-    import define2 from "https://api.observablehq.com/d/a87ed5abd750078a.js?v=3";
-    new Runtime().module(define2, name => {
-    if (name === "chart") return new Inspector(document.querySelector("#graph"));
-    if (name === "viewof mymap") return new Inspector(document.querySelector("#map"));
-    if (name === "map_filter") return true;
-    return ["Filter_Companies"].includes(name);
-  });
-
-    
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+import define from "https://api.observablehq.com/d/13e94fd213f5a5ef.js?v=3";
+let noetebook = new Runtime().module(define, name => {
+  if (name === "viewof map") return new Inspector(document.querySelector("#observablehq-viewof-map-f30d7294"));
+  if (name === "viewof chart") return new Inspector(document.querySelector("#observablehq-viewof-chart-f30d7294"));
+});
 
 
-    let w = 500;
+
+    let w = 5;
     let div = document.getElementById('wrapper')
-    james.redefine('width', w)
+    notebook.redefine('width', w)
 
     $(document).ready(function(){
       $('button[data-bs-toggle="tab"]').on('shown.bs.tab', function(event){
