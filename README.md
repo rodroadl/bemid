@@ -15,6 +15,9 @@
 - [EMSTAR](https://www.lifesciencesmaine.com/about)
   - Midcoast group -- beginning to organize things
   - Information underneath the names is more relevant for filtering, etc.
+- [Portland Food Map](https://www.portlandfoodmap.com/map-view/)
+  - Collapsible Tree
+  
 * [Aileen's site](https://teel.sites.northeastern.edu/life-sciences-in-maine/) in early stages
 * Would like a GUI for intellectual capital rather than just brick and mortar (which is what's there now)
 * Dataviz ideas
@@ -52,17 +55,6 @@ To update the data, create a new google sheet following the format of the curren
 
 ### Data Source:
 [Google Sheet 2](https://docs.google.com/spreadsheets/d/1X8SNuN75ASXs34Opg2vUDFGSSsaviK9oXn0tYE-ppKo/edit?usp=sharing)
-
-
-## Business Network 
-### Observable Notebook
-The map on the left is connected to the force-directed graph on the right 2-way. 
-Clicking on the map data points can update the graph.
-And clicking on the graph data points will highlight the points directly connected as well as filter the map data points (only if the point clicked is the sector dot in blue).  
-
-[Bioscience Company Map and Graph](https://observablehq.com/d/a87ed5abd750078a)
-
- 
 
 ### Data Source
 [Google Sheet - Companies Sheet](https://docs.google.com/spreadsheets/d/1dIol4lwkCH--nbRmlacVVbiOhaW_OoCG-bKq1HX0cCQ)
