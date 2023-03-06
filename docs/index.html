@@ -60,10 +60,10 @@
                 
                 <div class="row">
                     <div class="col-sm">
-                        <div id="observablehq-viewof-map-eaf1b642"></div>
-                    </div>
+                        <div id="observablehq-map-f896897c"></div>
+                        </div>
                     <div class="col-sm" id="wrapper">
-                        <div id="observablehq-viewof-chart-eaf1b642"></div>
+                        <div id="observablehq-viewof-chart-f896897c"></div>
                     </div>
                 </div>
 
@@ -77,13 +77,16 @@
 
 
 
+
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
 <script type="module">
     import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-    import define from "https://api.observablehq.com/d/13e94fd213f5a5ef@628.js?v=3";
+    import define from "https://api.observablehq.com/d/13e94fd213f5a5ef@703.js?v=3";
     let notebook = new Runtime().module(define, name => {
-    if (name === "viewof map") return new Inspector(document.querySelector("#observablehq-viewof-map-eaf1b642"));
-    if (name === "viewof chart") return new Inspector(document.querySelector("#observablehq-viewof-chart-eaf1b642"));
+    if (name === "map") return new Inspector(document.querySelector("#observablehq-map-f896897c"));
+    if (name === "viewof chart") return new Inspector(document.querySelector("#observablehq-viewof-chart-f896897c"));
+    return ["Filter_K12","Filter_Companies","Filter_Colleges","Filter_CC"].includes(name);
     });
 
 
