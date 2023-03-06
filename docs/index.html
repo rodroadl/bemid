@@ -75,11 +75,6 @@
 </html>
 
 
-<!--
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
--->
-
-
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
@@ -93,10 +88,12 @@
 
 
 
-    let f = 10000;
+    let f = 20;
+    let dx = 30; // control vertical spacing of chart
     let div = document.getElementById('wrapper')
 
     notebook.redefine('font', f)
+    notebook.redefine('dx', dx)
     
 
     $(document).ready(function(){
