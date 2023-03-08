@@ -60,10 +60,10 @@
                 
                 <div class="row">
                     <div class="col-sm">
-                        <div id="observablehq-map-f896897c"></div>
-                        </div>
+                        <div id="observablehq-map-0c58fa46"></div>
+                    </div>
                     <div class="col-sm" id="wrapper">
-                        <div id="observablehq-viewof-chart-f896897c"></div>
+                        <div id="observablehq-viewof-chart-0c58fa46"></div>
                     </div>
                 </div>
 
@@ -76,22 +76,19 @@
 
 
 
-
-
-
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
 <script type="module">
-    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-    import define from "https://api.observablehq.com/d/13e94fd213f5a5ef@703.js?v=3";
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+import define from "https://api.observablehq.com/d/13e94fd213f5a5ef@729.js?v=3";
     let notebook = new Runtime().module(define, name => {
-    if (name === "map") return new Inspector(document.querySelector("#observablehq-map-f896897c"));
-    if (name === "viewof chart") return new Inspector(document.querySelector("#observablehq-viewof-chart-f896897c"));
-    return ["Filter_K12","Filter_Companies","Filter_Colleges","Filter_CC"].includes(name);
-    });
+    if (name === "map") return new Inspector(document.querySelector("#observablehq-map-0c58fa46"));
+    if (name === "viewof chart") return new Inspector(document.querySelector("#observablehq-viewof-chart-0c58fa46"));
+        return ["Filter_K12","Filter_Companies","Filter_Colleges","Filter_CC"].includes(name);
+        });
 
 
 
-    let f = 20;
+    let f = 30;
     let dx = 30; // control vertical spacing of chart
     let div = document.getElementById('wrapper')
 
