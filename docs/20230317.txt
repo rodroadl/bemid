@@ -1,0 +1,24 @@
+Institution Type
+community college -> certificate, bachelor
+university -> undergraduate programs, graduate Programs
+company
+
+maine health
+nurse, doctor
+- cna, lab tech, 
+
+medicine
+- biology undergrad doctor of osciopath UNE
+
+PenBayHospital
+	Doctor
+		4 yrs undergrad -> premed biology, UNE
+	Nurses - LPN, RN
+		Bates
+		CC: SMCC
+	CNA (certified nursing assistant)
+		CC: York
+	MA (medical assistant)
+		CC: SMCC + York
+	respotory therapist
+		CC: SMCC
