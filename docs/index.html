@@ -32,19 +32,17 @@
         <h1 style="color: white;">Bioscience Dashboard</h1>
     </div>
 
-
-
     <div class="container">
-                <div id="observablehq-viewof-selected_company-3085bf32"></div>
-                <div id="observablehq-viewof-selected_occupation-3085bf32"></div>
-                <div id="observablehq-viewof-select-3085bf32"></div>
+        <div id="observablehq-viewof-selected_company-3085bf32"></div>
+        <div id="observablehq-viewof-selected_occupation-3085bf32"></div>
+        <div id="observablehq-viewof-select-3085bf32"></div>
         <div class="row">
             <div class="col-sm">
                 <div class="row">
                     <div class="col-sm">
                         <div id="observablehq-viewof-Maine-3085bf32"></div>
                     </div>
-                    <div class="col-sm" id="wrapper">
+                    <div class="col-sm">
                         <div id="observablehq-chart-3085bf32"></div>
                     </div>
                 </div>
@@ -72,23 +70,6 @@ import define from "https://api.observablehq.com/d/3986305711d88077@1682.js?v=3"
   if (name === "viewof select") return new Inspector(document.querySelector("#observablehq-viewof-select-3085bf32"));
   if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-3085bf32"));
   if (name === "viewof Maine") return new Inspector(document.querySelector("#observablehq-viewof-Maine-3085bf32"));
-        return ["Filter_K12","Filter_Companies","Filter_Colleges","Filter_CC"].includes(name);
+        return ["lines","labels","height","width0","Filter_K12","Filter_Companies","Filter_Colleges","Filter_CC","sideeffect"].includes(name);
         });
-
-
-    
-    // let f = 30;
-    // let dx = 30; // control vertical spacing of chart
-    // let div = document.getElementById('wrapper')
-
-    // notebook.redefine('font', f)
-    // notebook.redefine('dx', dx)
-    
-
-    // $(document).ready(function(){
-    //     $('button[data-bs-toggle="tab"]').on('shown.bs.tab', function(event){
-    //     window.dispatchEvent(new Event('resize'));
-    //     });
-    // });
-    
 </script>
