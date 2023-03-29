@@ -35,35 +35,17 @@
 
 
     <div class="container">
+                <div id="observablehq-viewof-selected_company-3085bf32"></div>
+                <div id="observablehq-viewof-selected_occupation-3085bf32"></div>
+                <div id="observablehq-viewof-select-3085bf32"></div>
         <div class="row">
             <div class="col-sm">
-                <p class="text-left">
-                    <br>
-                    Shows the hierarchical relationship between and location of Maine
-                    schools.
-                    <br>
-                    <br>
-                    The tree below the map can be expanded to display academic institution
-                    types, individual schools, and educational programs within those schools. That dummy data is imported
-                    from <a href="https://docs.google.com/spreadsheets/d/1dIol4lwkCH--nbRmlacVVbiOhaW_OoCG-bKq1HX0cCQ/edit#gid=692350962">
-                        this Google Sheet</a>, while the collapsible tree code is imported from
-                    <a href="https://observablehq.com/@aaronfihn/bioscience-collapsible-tree-1-0-0@596">
-                        this ObservableHQ notebook.</a> Any schools visible in the collapsible tree will be
-                    highlighted on the map with a red dot.
-                    <br>
-                    <br>
-                    Click the "Institution Type" nod below to expand the academic tree into school categories.
-                    These nodes can be expanded into individual schools, which can be further expanded into
-                    school academic programs.
-                </p>
-
-                
                 <div class="row">
                     <div class="col-sm">
-                        <div id="observablehq-map-0c58fa46"></div>
+                        <div id="observablehq-viewof-Maine-3085bf32"></div>
                     </div>
                     <div class="col-sm" id="wrapper">
-                        <div id="observablehq-viewof-chart-0c58fa46"></div>
+                        <div id="observablehq-chart-3085bf32"></div>
                     </div>
                 </div>
 
@@ -76,30 +58,37 @@
 
 
 
+
+
+
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-import define from "https://api.observablehq.com/d/13e94fd213f5a5ef@729.js?v=3";
+import define from "https://api.observablehq.com/d/3986305711d88077@1682.js?v=3";
     let notebook = new Runtime().module(define, name => {
-    if (name === "map") return new Inspector(document.querySelector("#observablehq-map-0c58fa46"));
-    if (name === "viewof chart") return new Inspector(document.querySelector("#observablehq-viewof-chart-0c58fa46"));
+  if (name === "viewof selected_company") return new Inspector(document.querySelector("#observablehq-viewof-selected_company-3085bf32"));
+  if (name === "viewof selected_occupation") return new Inspector(document.querySelector("#observablehq-viewof-selected_occupation-3085bf32"));
+  if (name === "viewof select") return new Inspector(document.querySelector("#observablehq-viewof-select-3085bf32"));
+  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-3085bf32"));
+  if (name === "viewof Maine") return new Inspector(document.querySelector("#observablehq-viewof-Maine-3085bf32"));
         return ["Filter_K12","Filter_Companies","Filter_Colleges","Filter_CC"].includes(name);
         });
 
 
+    
+    // let f = 30;
+    // let dx = 30; // control vertical spacing of chart
+    // let div = document.getElementById('wrapper')
 
-    let f = 30;
-    let dx = 30; // control vertical spacing of chart
-    let div = document.getElementById('wrapper')
-
-    notebook.redefine('font', f)
-    notebook.redefine('dx', dx)
+    // notebook.redefine('font', f)
+    // notebook.redefine('dx', dx)
     
 
-    $(document).ready(function(){
-        $('button[data-bs-toggle="tab"]').on('shown.bs.tab', function(event){
-        window.dispatchEvent(new Event('resize'));
-        });
-    });
+    // $(document).ready(function(){
+    //     $('button[data-bs-toggle="tab"]').on('shown.bs.tab', function(event){
+    //     window.dispatchEvent(new Event('resize'));
+    //     });
+    // });
     
 </script>
