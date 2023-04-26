@@ -1,0 +1,253 @@
+<!-- https://bbbootstrap.com/snippets/bootstrap-5-multi-step-form-90565495# -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bioscience Career in Maine</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="multi-step.css">
+    <link href="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css" rel="stylesheet" />
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+<div class="form__container">
+    <div class="title__container">
+        <h1>Bioscience Career in Maine</h1>
+        <p>Find a School that fits your career</p>
+    </div>
+    <div class="body__container">
+        <div class="left__container">
+            <div class="side__titles">
+                <div class="title__name">
+                    <h3>Company</h3>
+                    <p>Search & press next</p>
+                </div>
+                <div class="title__name">
+                    <h3>Job</h3>
+                    <p>Search & press next</p>
+                </div>
+                <div class="title__name">
+                    <h3>Program</h3>
+                    <p>Search & press submit</p>
+                </div>
+                <div class="title__name">
+                    <h3>School</h3>
+                    <p>List of school</p>
+                </div>
+            </div>
+            <div class="progress__bar__container">
+                <ul>
+                    <li class="active" id="icon1"><ion-icon name="business-outline"></ion-icon></li>
+                    <li id="icon2"><ion-icon name="briefcase-outline"></ion-icon></li>
+                    <li id="icon3"><ion-icon name="book-outline"></ion-icon></li>
+                    <li id="icon4"><ion-icon name="school-outline"></ion-icon></li>
+                </ul>
+            </div>
+        </div>
+        <div class="right__container">
+            <fieldset id="form1">
+                <div class="sub__title__container ">
+                    <p>Step 1/3</p>
+                    <h2>Company of your interest</h2>
+                    <p>Please submit the company of your interest</p>
+                </div>
+                
+                <div class="input__container">
+                    <label for="name">Enter your name</label>
+                    <div id="observablehq-viewof-selected_company-24859075"></div>
+                    <div id="observablehq-viewof-company_row-24859075"></div>
+                    <a class="nxt__btn" onclick="nextForm();"> Next</a>
+                </div>
+            </fieldset>
+            <fieldset class="active__form" id="form2">
+                <div class="sub__title__container">
+                    <p>Step 2/3</p>
+                    <h2>Job of your interest</h2>
+                    <p>Please submit the job of your interest</p>
+                </div>
+                
+                <div class="input__container">
+                    
+                    <div id="observablehq-viewof-selected_job-24859075"></div>
+                    <div id="observablehq-viewof-job_row-24859075"></div>
+                    <div class="buttons">
+                        <a class="prev__btn" onclick="prevForm();" >Back</a>
+                        <a class="nxt__btn"  onclick="nextForm();" >Next</a>    
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="active__form" id="form3">
+                <div class="sub__title__container">
+                    <p>Step 3/3</p>
+                    <h2>Program of your interest</h2>
+                    <p>Please submit the job of your interest</p>
+                </div>
+                
+                <div class="input__container">
+                    <div id="observablehq-viewof-selected_program-24859075"></div>
+                    <div id="observablehq-viewof-program_row-24859075"></div>
+                    <div class="buttons">
+                        <a class="prev__btn" onclick="prevForm();" >Back</a>
+                        <a class="nxt__btn" id="submitBtn" onclick="nextForm();" >Next</a>  
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="active__form" id="form4">
+                <div class="sub__title__container">
+                    <h2>List of school</h2>
+                    <p>Below, it is a list of schools you might be intersted</p>
+                </div>
+                
+                <div class="input__container">
+                    <div id="observablehq-viewof-Maine-24859075"></div>
+                    <div id="observablehq-viewof-school_row-24859075"></div>
+                    <div class="buttons">
+                        <a class="prev__btn"  onclick="prevForm();" >Back</a>    
+                    </div>
+                    
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</div>
+</body>
+
+<script>
+    const nxtBtn = document.querySelector('#submitBtn');
+    const form1 = document.querySelector('#form1');
+    const form2 = document.querySelector('#form2');
+    const form3 = document.querySelector('#form3');
+    const form4 = document.querySelector('#form4');
+
+    const icon1 = document.querySelector('#icon1');
+    const icon2 = document.querySelector('#icon2');
+    const icon3 = document.querySelector('#icon3');
+    const icon4 = document.querySelector('#icon4');
+
+    var viewId = 1;
+    function nextForm(){
+        console.log("hellonext");
+        viewId=viewId+1;
+        progressBar();
+        displayForms();
+        
+        console.log(viewId);
+
+    }
+
+    function prevForm(){
+        console.log("helloprev");
+        viewId=viewId-1;
+        console.log(viewId);
+        progressBar1();
+        displayForms();
+    }
+    function progressBar1(){
+        if(viewId===1){
+            icon2.classList.add('active');
+            icon2.classList.remove('active');
+            icon3.classList.remove('active');
+            icon4.classList.remove('active');
+        }
+        if(viewId===2){
+            icon2.classList.add('active');
+            icon3.classList.remove('active');
+            icon4.classList.remove('active');
+        }
+        if(viewId===3){
+            icon3.classList.add('active');
+            icon4.classList.remove('active');
+            nxtBtn.innerHTML = "Submit"
+        }
+        if(viewId===4){
+            icon4.classList.add('active');
+        }
+        if(viewId>4){
+            icon2.classList.remove('active');
+            icon3.classList.remove('active');
+            icon4.classList.remove('active');            
+        }
+    }
+
+    function progressBar(){
+        if(viewId===2){
+            icon2.classList.add('active');
+        }
+        if(viewId===3){
+            icon3.classList.add('active');
+            nxtBtn.innerHTML = "Submit"
+        }
+        if(viewId===4){
+            icon4.classList.add('active');
+        }
+        if(viewId>4){
+            icon2.classList.remove('active');
+            icon3.classList.remove('active');
+            icon4.classList.remove('active');            
+        }
+    }
+
+    function displayForms(){
+        
+        if(viewId>4){
+            viewId=1;
+        }
+
+        if(viewId ===1){
+            form1.style.display = 'block';
+            form2.style.display = 'none';
+            form3.style.display = 'none';
+            form4.style.display = 'none';
+        }else if(viewId === 2){
+            form1.style.display = 'none';
+            form2.style.display = 'block';
+            form3.style.display = 'none';
+            form4.style.display = 'none';
+        }else if(viewId === 3){
+            form1.style.display = 'none';
+            form2.style.display = 'none';
+            form3.style.display = 'block';
+            form4.style.display = 'none';
+        }else if(viewId === 4){
+            form1.style.display = 'none';
+            form2.style.display = 'none';
+            form3.style.display = 'none';
+            form4.style.display = 'block';
+            window.dispatchEvent(new Event('resize'));
+        }
+    }
+
+    // for slider
+
+    var slider = document.querySelector(".slider");
+    var output = document.querySelector(".output__value");
+    output.innerHTML = slider.value ;
+
+    slider.oninput = function() {
+        output.innerHTML = this.value ;
+    }
+</script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+<script type="module">
+    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+    import define from "https://api.observablehq.com/d/27ea1f0e6d8b4289@1937.js?v=3";
+    let notebook = new Runtime().module(define, name => {
+        if (name === "viewof Maine") return new Inspector(document.querySelector("#observablehq-viewof-Maine-24859075"));
+        if (name === "viewof selected_company") return new Inspector(document.querySelector("#observablehq-viewof-selected_company-24859075"));
+        if (name === "viewof company_row") return new Inspector(document.querySelector("#observablehq-viewof-company_row-24859075"));
+        if (name === "viewof selected_job") return new Inspector(document.querySelector("#observablehq-viewof-selected_job-24859075"));
+        if (name === "viewof job_row") return new Inspector(document.querySelector("#observablehq-viewof-job_row-24859075"));
+        if (name === "viewof selected_program") return new Inspector(document.querySelector("#observablehq-viewof-selected_program-24859075"));
+        if (name === "viewof program_row") return new Inspector(document.querySelector("#observablehq-viewof-program_row-24859075"));
+        if (name === "viewof school_row") return new Inspector(document.querySelector("#observablehq-viewof-school_row-24859075"));
+        return ["Filter_Companies","Filter_K12","Filter_Colleges","Filter_CC","filtered_occupation","filtered_program"].includes(name);
+    });
+
+</script>
+
+</html>
